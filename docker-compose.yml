@@ -2,11 +2,10 @@ version: '3.8'
 services:
   caddy:
     image: stephaneklein/caddy-auth-portal:2.2.1-alpine
-    command: caddy run --resume --config /etc/caddy/Caddyfile
+    command: caddy run --watch --config /config/Caddyfile
     volumes:
       - ./html/:/var/lib/html/
-      - ./data/:/data/
-      - ./config/:/etc/caddy/
+      - ./config/:/config/
     ports:
       - 80:80
 
