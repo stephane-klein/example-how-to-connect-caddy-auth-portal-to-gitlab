@@ -1,0 +1,4 @@
+example.com:80 {
+    file_server /var/lib/html/
+    header Cache-Control max-age=0
+}
